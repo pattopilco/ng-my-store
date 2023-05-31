@@ -7,4 +7,27 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-store';
+  btnDisable = true;
+  nombres = "Isabella Pilco Duarte";
+  edad = 10;
+
+  toggleButton(){
+    this.btnDisable = !this.btnDisable;
+  }
+
+  addEdad(){
+    this.edad = this.edad + 1;
+  }
+
+  onScroll(event: Event){
+    const element = event.target as HTMLElement;
+    console.log(element.scrollTo);
+  }
+
+  changeName(event: Event){
+    const element = event.target as HTMLInputElement;
+    this.nombres = element.value;
+  }
 }
+
+
