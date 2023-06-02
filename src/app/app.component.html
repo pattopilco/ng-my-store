@@ -14,3 +14,21 @@
 </div>
 <p>Nombre {{ nombres}}</p>
 <input type="text" [value]="nombres" (keyup)="changeName($event)"/>
+
+<h1>*ngIf</h1>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="nombres" />
+<p *ngIf="nombres === 'patricio'; else myBlock;">Mi Nombre es patricio</p>
+<ng-template #myBlock>
+  <p>En texto ingresado no es igual a patricio</p>
+</ng-template>
+
+<h1> Mis ejemplos </h1>
+
+<input type="text" required [(ngModel)]="edad" />
+<p *ngIf="edad === 41; else myBlockAge">Mi edad es 41</p>
+<ng-template #myBlockAge>
+  <p>Edad Incorrecta</p>
+</ng-template>
+
+
+
