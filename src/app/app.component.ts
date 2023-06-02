@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -41,6 +42,28 @@ export class AppComponent {
   deleteName(index: number){
     this.names.splice(index);
   }
+
+  //NGFOR ARRAY
+
+  products: Product[] = [
+    {
+      name:'El mejor juguete',
+      price: 565,
+      image: './assets/images/toy.jpg',
+      category: 'all'
+    },
+    {
+      name: 'Bicicleta case nueva',
+      price: 356,
+      image: './assets/images/bike.jpg'
+    },
+    {
+      name: 'Colección de albunes',
+      price: 34,
+      image: './assets/images/album.jpg'
+    }
+  ]
+
 }
 
 
