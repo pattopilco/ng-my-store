@@ -31,4 +31,16 @@
 </ng-template>
 
 
+<h1> ngFor</h1>
+
+<ul>
+  <li *ngFor="let n of names; index as i">
+   {{i}} {{n}}
+   <button (click)="deleteName(i)"></button>
+  </li>
+</ul>
+
+<hr/>
+<input type="text" required [(ngModel)]="newName"/>
+<button (click)="addName()">Add Name</button>
 

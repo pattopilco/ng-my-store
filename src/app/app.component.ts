@@ -28,6 +28,19 @@ export class AppComponent {
     const element = event.target as HTMLInputElement;
     this.nombres = element.value;
   }
+
+
+  // NGFOR
+  names: string[] = ['Nico', 'Juli', 'Santi'];
+  newName = '';
+
+  addName(){
+    this.names.push(this.newName);
+  }
+
+  deleteName(index: number){
+    this.names.splice(index);
+  }
 }
 
 
